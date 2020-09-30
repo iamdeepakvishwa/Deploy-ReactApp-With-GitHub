@@ -1,15 +1,16 @@
-## To deploy react app using Github:
+## How to deploy react app using Github:
 
 1. npm install
 2. npm install gh-pages --save-dev
 3. Add properties to package.json file as following:
-    - Add at the start "homepage": "https://{username}.github.io/{repo-name}"
-    - In the existing scripts property add:
+    * Add at the start ```" homepage": "https://{username}.github.io/{repo-name}" ```
+    * In the existing scripts property add:
+    ```js
     "scripts":{
-           // ...
-          "predeploy": "npm run build",
-          "deploy": "gh-pages -d build"
-          }
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    }
+    ```
 4. git init
 5. git remote add origin {repo-address}
 6. npm run deploy
